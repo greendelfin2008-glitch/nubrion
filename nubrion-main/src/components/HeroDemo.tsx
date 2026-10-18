@@ -73,10 +73,10 @@ const SCENARIOS: Scenario[] = [
 ];
 
 const FIRST = 350;
-const GAP = 1050;
+const GAP = 1600;
 const CHAR = 16;
 const WORK = 600;
-const HOLD = 4200;
+const HOLD = 8000;
 const INTRO = 2300;
 
 const resultAt = (s: Scenario) => FIRST + s.lines.length * GAP + 250;
