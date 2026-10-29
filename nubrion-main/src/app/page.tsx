@@ -1,3 +1,4 @@
+import ChatWidget from "@/components/ChatWidget";
 import Companion from "@/components/Companion";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
@@ -21,6 +22,7 @@ export default function Home() {
         </MotionRoot>
       </main>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
