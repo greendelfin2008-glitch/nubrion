@@ -10,7 +10,7 @@ const services: { tag: string; demo: string; shape: OrbShape; title: string; tex
     demo: "infra",
     shape: "servers",
     title: "Lokálně, nebo v cloudu, podle toho, co váš byznys potřebuje.",
-    text: "Citlivá data mohou zůstat na vašich vlastních serverech. Jinde dává smysl škálovatelnost cloudu. Navrhneme a nasadíme variantu, která sedí vám, ne nám.",
+    text: "Postavíme AI na vašem serveru, v cloudu, nebo na kombinaci obojího. Rozhoduje citlivost dat, potřebný výkon a rozpočet, ne naše preference.",
   },
   {
     tag: "Data a procesy",

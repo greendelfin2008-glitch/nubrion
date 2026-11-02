@@ -14,7 +14,7 @@ export function Intro() {
           <span className="eyebrow">Co děláme</span>
           <h2 className="mb-5 mt-4 text-h2">AI nasazená tam, kde má reálný dopad</h2>
           <p className="max-w-[36em] text-lead text-muted">
-            Neděláme jedno řešení pro všechny. Navrhneme a nasadíme variantu, která sedí vám, ne nám.
+            Začínáme od vašich procesů, ne od technologie. Nejdřív najdeme místa, kde se ztrácí nejvíc času, a teprve pak vybereme nástroj.
           </p>
         </div>
         <FeatureToggle />
@@ -30,8 +30,8 @@ export function Services() {
       <div className={wrap}>
         <span data-reveal className="eyebrow">Tři oblasti</span>
         <Statement
-          text="Neděláme jedno řešení pro všechny. Podle potřeb firmy vybíráme, kudy vede"
-          accent="nejkratší cesta k výsledku."
+          text="Pracujeme ve třech oblastech. V každé hledáme"
+          accent="nejkratší cestu k měřitelnému výsledku."
         />
         <ServicesList />
       </div>
@@ -87,11 +87,11 @@ export function Cta() {
           className="cta-card relative grid items-center gap-10 overflow-hidden rounded-[28px] border border-gold-line px-5 py-14 sm:px-12 sm:py-20 md:grid-cols-[1.25fr_1fr] lg:px-16"
         >
           <div className="relative">
-            <h2 className="max-w-[14ch] text-[clamp(2.25rem,1.4rem+2.6vw,4rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
-              Rozjíždíme první spolupráce.
+            <h2 className="max-w-[16ch] text-[clamp(2.25rem,1.4rem+2.6vw,4rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
+              Zjistěte, kde vám AI ušetří nejvíc času.
             </h2>
             <p className="mb-10 mt-6 max-w-[30em] text-lead text-muted">
-              Pokud chcete být u toho od začátku, domluvte si konzultaci nebo nám napište.
+              Na úvodní konzultaci projdeme vaše procesy a ukážeme, kde má nasazení AI smysl a kde zatím ne.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="mailto:info@nubrion.cz?subject=Konzultace" data-magnetic className="btn btn-gold btn-lg cta-glow grow sm:grow-0">
@@ -129,7 +129,7 @@ export function Footer() {
               Nubrion
             </a>
             <p className="mt-4 max-w-[300px] text-sm text-muted">
-              AI, která ve firmě opravdu běží. Rozjíždíme první spolupráce, ozvěte se.
+              AI, která ve firmě opravdu běží. Infrastruktura, data a procesy, agenda a komunikace.
             </p>
           </div>
           {footCols.map((c) => (
