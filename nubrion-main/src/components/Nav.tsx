@@ -10,7 +10,7 @@ const links = [
   { href: "#co-delame", label: "Co děláme" },
   { href: "#oblasti", label: "Oblasti" },
   { href: "#prubeh", label: "Jak to probíhá" },
-  { href: "#otazky", label: "Otázky" },
+  { href: "#otazky", label: "Časté otázky" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
