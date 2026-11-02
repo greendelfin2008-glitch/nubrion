@@ -103,7 +103,7 @@ export default function Hero() {
           </h1>
 
           <p data-hero="lead" className="max-w-[40ch] text-lead text-[#c4cad4]">
-            Zapojíme AI do vašich e-mailů, dat a interních systémů. Tak, aby šetřila hodiny práce a data zůstala pod vaší kontrolou.
+            Pomáháme firmám šetřit čas a peníze. Zapojíme AI do vašich e-mailů, dat a interních systémů tak, aby data zůstala pod vaší kontrolou.
           </p>
 
           <div data-hero="actions" className="mt-9 flex flex-wrap gap-3 2xl:mt-11">

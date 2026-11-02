@@ -77,6 +77,63 @@ export function Steps() {
   );
 }
 
+/* ---------------- Časté otázky ---------------- */
+const faqs = [
+  {
+    q: "Kolik to stojí?",
+    a: "Cenu stanovujeme individuálně podle rozsahu a složitosti řešení. Po úvodní konzultaci dostanete konkrétní návrh i s cenou, abyste věděli, do čeho jdete.",
+  },
+  {
+    q: "Kde budou naše data?",
+    a: "Tam, kde je chcete mít. Citlivá data mohou zůstat na serveru ve vaší firmě, jinde dává smysl cloud. Variantu vybíráme podle citlivosti dat, výkonu a rozpočtu.",
+  },
+  {
+    q: "Potřebujeme vlastní IT tým?",
+    a: "Ne. Řešení zprovozníme, ukážeme vašim lidem, jak s ním pracovat, a postaráme se o to, aby dál běželo.",
+  },
+  {
+    q: "S jakými nástroji umíte AI propojit?",
+    a: "Typicky s e-mailem a Outlookem, kalendářem, sdílenými disky, exporty z účetnictví (CSV, XLSX) nebo s ERP. Na konzultaci projdeme, co používáte vy.",
+  },
+  {
+    q: "Jak začít?",
+    a: "Domluvte si krátkou konzultaci. Projdeme, kde vám dnes utíká nejvíc času, a řekneme vám, jestli a kde má AI smysl.",
+  },
+];
+
+export function Faq() {
+  return (
+    <section id="otazky" className="pb-20 pt-10 lg:pb-28">
+      <div className={`${wrap} grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16`}>
+        <div data-reveal>
+          <span className="eyebrow">Časté otázky</span>
+          <h2 className="mb-5 mt-4 text-h2">Na co se nás ptáte</h2>
+          <p className="max-w-[30em] text-lead text-muted">
+            Nenašli jste odpověď? Napište na{" "}
+            <a href="mailto:info@nubrion.cz" className="text-text underline decoration-gold-line underline-offset-4 hover:text-gold">
+              info@nubrion.cz
+            </a>
+            .
+          </p>
+        </div>
+        <div data-reveal className="border-b border-white/10">
+          {faqs.map(({ q, a }) => (
+            <details key={q} className="group border-t border-white/10">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-6 py-5 font-head text-h4 font-semibold transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold [&::-webkit-details-marker]:hidden">
+                {q}
+                <svg viewBox="0 0 16 16" aria-hidden="true" className="h-4 w-4 shrink-0 text-gold transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+                  <path d="M8 2v12M2 8h12" />
+                </svg>
+              </summary>
+              <p className="max-w-[60ch] pb-6 text-body text-muted">{a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- CTA ---------------- */
 export function Cta() {
   return (
@@ -101,6 +158,15 @@ export function Cta() {
                 info@nubrion.cz
               </a>
             </div>
+            <div className="mt-8 flex items-center gap-3 text-sm text-muted">
+              <span aria-hidden="true" className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold-line bg-gold-soft font-head text-lg font-semibold text-gold">
+                L
+              </span>
+              <p>
+                <span className="block font-semibold text-text">Lukáš z Nubrionu</span>
+                Konzultaci s vámi povede osobně.
+              </p>
+            </div>
           </div>
           {/* the companion orb lands here as an envelope on its way to the footer logo */}
           <div data-orb="mail" aria-hidden="true" className="order-first mx-auto -mb-4 aspect-square w-[150px] sm:w-[220px] md:order-none md:mb-0 md:w-full md:max-w-[360px]" />
@@ -112,7 +178,7 @@ export function Cta() {
 
 /* ---------------- Footer ---------------- */
 const footCols = [
-  { h: "Navigace", links: [["#co-delame", "Co děláme"], ["#oblasti", "Oblasti"], ["#prubeh", "Jak to probíhá"]] },
+  { h: "Navigace", links: [["#co-delame", "Co děláme"], ["#oblasti", "Oblasti"], ["#prubeh", "Jak to probíhá"], ["#otazky", "Časté otázky"]] },
   { h: "Oblasti", links: [["#oblasti", "Infrastruktura"], ["#oblasti", "Data a procesy"], ["#oblasti", "Agenda a komunikace"]] },
   { h: "Kontakt", links: [["mailto:info@nubrion.cz", "info@nubrion.cz"], ["#kontakt", "Rezervovat konzultaci"]] },
 ];

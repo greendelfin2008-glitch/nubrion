@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import SmoothScroll from "@/components/SmoothScroll";
 import MotionRoot from "@/components/motion/MotionRoot";
-import { Cta, Footer, Intro, Services, Steps } from "@/components/Sections";
+import { Cta, Faq, Footer, Intro, Services, Steps } from "@/components/Sections";
 
 export default function Home() {
   return (
@@ -18,6 +18,7 @@ export default function Home() {
           <Intro />
           <Services />
           <Steps />
+          <Faq />
           <Cta />
         </MotionRoot>
       </main>
