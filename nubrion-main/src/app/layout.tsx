@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nubrion – AI, která ve firmě opravdu běží",
   description:
-    "Nubrion pomáhá firmám nasadit AI tam, kde má reálný dopad. Infrastruktura, data a procesy, agenda a komunikace.",
+    "Nubrion pomáhá firmám šetřit čas a peníze pomocí umělé inteligence. Infrastruktura, data a procesy, agenda a komunikace.",
 };
 
 // Runs before paint: enables motion-only initial states, with a safety net
