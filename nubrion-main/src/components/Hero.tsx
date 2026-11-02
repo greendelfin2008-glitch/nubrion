@@ -79,7 +79,7 @@ export default function Hero() {
         <div>
           <span data-hero="badge" className="inline-flex items-center gap-2 text-sm text-muted">
             <span className="h-2 w-2 animate-[pulse-dot_2s_infinite] rounded-full bg-gold shadow-[0_0_0_4px_rgb(217_164_65/0.14)]" />
-            Nubrion právě vzniká
+            AI pro firmy · lokálně i v cloudu
           </span>
 
           <h1
@@ -102,8 +102,8 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p data-hero="lead" className="max-w-[34ch] text-lead text-[#c4cad4]">
-            Budujeme systém, který pomáhá firmám nasadit AI tam, kde má reálný dopad, ne jen v prezentaci.
+          <p data-hero="lead" className="max-w-[40ch] text-lead text-[#c4cad4]">
+            Zapojíme AI do vašich e-mailů, dat a interních systémů. Tak, aby šetřila hodiny práce a data zůstala pod vaší kontrolou.
           </p>
 
           <div data-hero="actions" className="mt-9 flex flex-wrap gap-3 2xl:mt-11">
@@ -132,8 +132,8 @@ export default function Hero() {
           <div className="relative z-10 -mt-6 w-full max-w-[560px] lg:-mt-12 2xl:-mt-16 2xl:max-w-[620px]">
             <HeroDemo onShape={onShape} />
           </div>
-          <p data-hero="hint" className="mt-3 hidden text-center text-sm text-muted/70 lg:block [@media(max-height:860px)]:lg:hidden">
-            Pohněte kurzorem přes částice. Kliknutím je rozvíříte.
+          <p data-hero="hint" className="mt-3 text-center text-sm text-muted/70">
+            Ilustrativní ukázka práce AI asistenta
           </p>
         </div>
       </div>
