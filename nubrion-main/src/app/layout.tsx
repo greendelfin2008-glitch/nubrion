@@ -17,10 +17,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin", "latin-ext"],
 });
 
+const title = "Nubrion – AI, která ve firmě opravdu běží";
+const description =
+  "Nubrion pomáhá firmám šetřit čas a peníze pomocí umělé inteligence. Administrativa, time management, faktury a firemní inteligence.";
+
 export const metadata: Metadata = {
-  title: "Nubrion – AI, která ve firmě opravdu běží",
-  description:
-    "Nubrion pomáhá firmám šetřit čas a peníze pomocí umělé inteligence. Infrastruktura, data a procesy, agenda a komunikace.",
+  // makes the og:image URL absolute, which WhatsApp and Messenger require
+  metadataBase: new URL("https://nubrion.cz"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Nubrion",
+    locale: "cs_CZ",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 // Runs before paint: enables motion-only initial states, with a safety net
