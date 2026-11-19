@@ -2,6 +2,7 @@ import FeatureToggle from "./FeatureToggle";
 import ServicesList from "./ServicesList";
 import Statement from "./motion/Statement";
 import { Chat, Pen, Rocket } from "./icons";
+import { CONTACT_MAILTO, EMAIL, mailto } from "@/lib/contact";
 
 const wrap = "mx-auto w-full max-w-[1200px] px-4 sm:px-8 2xl:max-w-[1440px]";
 
@@ -14,7 +15,7 @@ export function Intro() {
           <span className="eyebrow">Co děláme</span>
           <h2 className="mb-5 mt-4 text-h2">AI nasazená tam, kde má reálný dopad</h2>
           <p className="max-w-[36em] text-lead text-muted">
-            Začínáme od vašich procesů, ne od technologie. Nejdřív najdeme místa, kde se ztrácí nejvíc času, a teprve pak vybereme nástroj.
+            Pomáháme s administrativou, time managementem, fakturami a firemní inteligencí. Začínáme od vašich procesů, ne od technologie. Nejdřív najdeme místa, kde se ztrácí nejvíc času, a teprve pak vybereme nástroj.
           </p>
         </div>
         <FeatureToggle />
@@ -28,9 +29,9 @@ export function Services() {
   return (
     <section id="oblasti" className="pb-20 pt-10 lg:pb-28">
       <div className={wrap}>
-        <span data-reveal className="eyebrow">Tři oblasti</span>
+        <span data-reveal className="eyebrow">Čtyři oblasti</span>
         <Statement
-          text="Pracujeme ve třech oblastech. V každé hledáme"
+          text="Pracujeme ve čtyřech oblastech. V každé hledáme"
           accent="nejkratší cestu k měřitelnému výsledku."
         />
         <ServicesList />
@@ -110,7 +111,7 @@ export function Faq() {
           <h2 className="mb-5 mt-4 text-h2">Na co se nás ptáte</h2>
           <p className="max-w-[30em] text-lead text-muted">
             Nenašli jste odpověď? Napište na{" "}
-            <a href="mailto:info@nubrion.cz" className="text-text underline decoration-gold-line underline-offset-4 hover:text-gold">
+            <a href={mailto("Dotaz z webu")} className="text-text underline decoration-gold-line underline-offset-4 hover:text-gold">
               info@nubrion.cz
             </a>
             .
@@ -148,14 +149,14 @@ export function Cta() {
               Zjistěte, kde vám AI ušetří nejvíc času.
             </h2>
             <p className="mb-10 mt-6 max-w-[30em] text-lead text-muted">
-              Na úvodní konzultaci projdeme vaše procesy a ukážeme, kde má nasazení AI smysl a kde zatím ne.
+              Napište nám, co vás zdržuje. Projdeme vaše procesy a ukážeme, kde má nasazení AI smysl a kde zatím ne.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="mailto:info@nubrion.cz?subject=Konzultace" data-magnetic className="btn btn-gold btn-lg cta-glow grow sm:grow-0">
-                Rezervovat konzultaci
+              <a href={CONTACT_MAILTO} data-magnetic className="btn btn-gold btn-lg cta-glow grow sm:grow-0">
+                Kontaktujte nás
               </a>
-              <a href="mailto:info@nubrion.cz" data-magnetic className="btn btn-ghost btn-lg grow sm:grow-0">
-                info@nubrion.cz
+              <a href={mailto()} data-magnetic className="btn btn-ghost btn-lg grow sm:grow-0">
+                {EMAIL}
               </a>
             </div>
             <div className="mt-8 flex items-center gap-3 text-sm text-muted">
@@ -164,7 +165,7 @@ export function Cta() {
               </span>
               <p>
                 <span className="block font-semibold text-text">Lukáš z Nubrionu</span>
-                Konzultaci s vámi povede osobně.
+                Na e-maily odpovídá osobně.
               </p>
             </div>
           </div>
@@ -179,8 +180,8 @@ export function Cta() {
 /* ---------------- Footer ---------------- */
 const footCols = [
   { h: "Navigace", links: [["#co-delame", "Co děláme"], ["#oblasti", "Oblasti"], ["#prubeh", "Jak to probíhá"], ["#otazky", "Časté otázky"]] },
-  { h: "Oblasti", links: [["#oblasti", "Infrastruktura"], ["#oblasti", "Data a procesy"], ["#oblasti", "Agenda a komunikace"]] },
-  { h: "Kontakt", links: [["mailto:info@nubrion.cz", "info@nubrion.cz"], ["#kontakt", "Rezervovat konzultaci"]] },
+  { h: "Oblasti", links: [["#oblasti", "Administrativa"], ["#oblasti", "Time management"], ["#oblasti", "Faktury"], ["#oblasti", "Firemní inteligence"]] },
+  { h: "Kontakt", links: [["mailto:info@nubrion.cz", "info@nubrion.cz"], [mailto(), "Napište nám"]] },
 ];
 
 export function Footer() {
@@ -195,7 +196,7 @@ export function Footer() {
               Nubrion
             </a>
             <p className="mt-4 max-w-[300px] text-sm text-muted">
-              AI, která ve firmě opravdu běží. Infrastruktura, data a procesy, agenda a komunikace.
+              AI, která ve firmě opravdu běží. Administrativa, time management, faktury a firemní inteligence.
             </p>
           </div>
           {footCols.map((c) => (

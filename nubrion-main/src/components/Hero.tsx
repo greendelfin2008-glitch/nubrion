@@ -108,13 +108,13 @@ export default function Hero() {
 
           <div data-hero="actions" className="mt-9 flex flex-wrap gap-3 2xl:mt-11">
             <a
-              href="#kontakt"
+              href="#prubeh"
               data-magnetic
               onMouseEnter={() => inhale(true)}
               onMouseLeave={() => inhale(false)}
               className="btn btn-gold grow sm:grow-0"
             >
-              Rezervovat konzultaci
+              Jak to probíhá?
             </a>
             <a href="#co-delame" data-magnetic className="btn btn-ghost grow sm:grow-0">
               Co děláme

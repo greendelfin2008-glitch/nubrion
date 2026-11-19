@@ -5,6 +5,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Logo } from "./icons";
 import { motionEnabled } from "@/lib/heroState";
 import { smooth } from "@/lib/smoothScroll";
+import { mailto } from "@/lib/contact";
 
 const links = [
   { href: "#co-delame", label: "Co děláme" },
@@ -119,8 +120,8 @@ export default function Nav() {
           />
         </div>
 
-        <a href="#kontakt" className="hidden rounded-lg bg-text px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-gold lg:inline-block">
-          Rezervovat konzultaci
+        <a href={mailto()} className="hidden rounded-lg bg-text px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-gold lg:inline-block">
+          Napište nám
         </a>
 
         <button
@@ -155,8 +156,8 @@ export default function Nav() {
               </a>
             ))}
           </div>
-          <a href="#kontakt" data-mobile-link onClick={() => setOpen(false)} className="btn btn-gold justify-center">
-            Rezervovat konzultaci
+          <a href={mailto()} data-mobile-link onClick={() => setOpen(false)} className="btn btn-gold justify-center">
+            Napište nám
           </a>
         </div>
       )}

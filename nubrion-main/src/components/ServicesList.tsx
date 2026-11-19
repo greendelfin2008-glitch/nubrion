@@ -4,32 +4,42 @@ import { useEffect, useRef, useState } from "react";
 import { DEMO_EVENT, type OrbShape } from "@/lib/heroState";
 import { scrollToEl } from "@/lib/smoothScroll";
 
+// "Přehrát ukázku" buttons are hidden until a real video or demo is ready; flip to true to bring them back.
+const SHOW_DEMO_BUTTONS = false;
+
 const services: { tag: string; demo: string; shape: OrbShape; title: string; text: string }[] = [
   {
-    tag: "Infrastruktura",
-    demo: "infra",
+    tag: "Administrativa",
+    demo: "mail",
     shape: "servers",
-    title: "Lokálně, nebo v cloudu, podle toho, co váš byznys potřebuje.",
-    text: "Postavíme AI na vašem serveru, v cloudu, nebo na kombinaci obojího. Rozhoduje citlivost dat, potřebný výkon a rozpočet, ne naše preference.",
+    title: "Papírování, které se z velké části udělá samo.",
+    text: "AI roztřídí příchozí dokumenty a e-maily, vytáhne z nich důležité údaje a připraví podklady. Vaši lidé je jen zkontrolují a schválí.",
   },
   {
-    tag: "Data a procesy",
-    demo: "data",
-    shape: "bars",
-    title: "Data, která dávají smysl. Procesy, které netrvají věčnost.",
-    text: "Pomůžeme zpřehlednit data a najít místa, kde AI zrychlí výpočty, sníží chybovost a ušetří hodiny ruční práce.",
-  },
-  {
-    tag: "Agenda a komunikace",
+    tag: "Time management",
     demo: "mail",
     shape: "mail",
     title: "Schůzky, e-maily a kalendář, které se domluví samy.",
-    text: "Propojíme AI s poštou, Outlookem a kalendářem tak, aby plánování schůzek a třídění zpráv přestalo být vaše denní starost.",
+    text: "Propojíme AI s poštou, Outlookem a kalendářem. Plánování schůzek, připomínky a třídění zpráv přestanou být vaše denní starost.",
+  },
+  {
+    tag: "Faktury",
+    demo: "data",
+    shape: "bars",
+    title: "Faktury bez ručního přepisování a bez chyb.",
+    text: "AI načte přijaté faktury, zkontroluje je proti objednávkám a připraví je pro účetnictví. Upozorní na nesrovnalosti i blížící se splatnosti.",
+  },
+  {
+    tag: "Firemní inteligence",
+    demo: "infra",
+    shape: "cloud",
+    title: "Odpovědi z vašich firemních dat během pár vteřin.",
+    text: "Propojíme AI s vašimi dokumenty, tabulkami a systémy. Zeptáte se běžnou řečí a dostanete odpověď i s odkazem na zdroj. Data přitom zůstanou pod vaší kontrolou.",
   },
 ];
 
 /**
- * Three areas as tall rows. On desktop the companion orb sits in a sticky slot
+ * Four areas as tall rows. On desktop the companion orb sits in a sticky slot
  * at mid-screen and takes the shape of the row that crosses the middle; on
  * mobile every row has its own small slot.
  */
@@ -103,6 +113,7 @@ export default function ServicesList() {
               {s.title}
             </h3>
             <p className="mt-4 max-w-[56ch] text-body text-muted">{s.text}</p>
+            {SHOW_DEMO_BUTTONS && (
             <button
               type="button"
               onClick={() => runDemo(s.demo)}
@@ -111,6 +122,7 @@ export default function ServicesList() {
               <svg viewBox="0 0 16 16" className="h-3 w-3" fill="currentColor"><path d="M4 2.5v11l9-5.5z" /></svg>
               Přehrát ukázku
             </button>
+            )}
           </article>
         ))}
       </div>
